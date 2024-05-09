@@ -56,7 +56,7 @@ const MapComponent = () => {
     if (curRest) {
       flyToMarker(curRest["rest_coor"], zoomLevel);
     }
-  }, [curRest, zoomLevel]);
+  }, [curRest]);
 
   const showError = (errorMessage) => {
     setError(errorMessage);
