@@ -56,7 +56,7 @@ const MapComponent = () => {
     if (curRest) {
       flyToMarker(curRest["rest_coor"], zoomLevel);
     }
-  }, [curRest]);
+  }, [curRest, zoomLevel]);
 
   const showError = (errorMessage) => {
     setError(errorMessage);
@@ -161,8 +161,11 @@ const MapComponent = () => {
           {restaurant.rest_name}
         </h1>
         <div className="flex gap-1 flex-wrap">
-          {restaurant.rest_foods.map((type) => (
-            <p className="px-2 py-1  bg-yellow-100 rounded-full text-xs">
+          {restaurant.rest_foods.map((type, i) => (
+            <p
+              key={i}
+              className="px-2 py-1  bg-yellow-100 rounded-full text-xs"
+            >
               {type}
             </p>
           ))}

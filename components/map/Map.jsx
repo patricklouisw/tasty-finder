@@ -25,7 +25,7 @@ const Map = () => {
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger className="p-5 bg-slate-100 rounded font-bold text-slate-800">
-              Developer's Note
+              Developer&apos;s Note
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-2 bg-slate-50 p-5">
               <div className="flex gap-2 my-2 flex-col">
@@ -50,9 +50,9 @@ const Map = () => {
 
               <p>
                 Currently, our feature is limited to english-speaking videos
-                that youtube marked as category "Travel & Events", hence some
-                videos with food content may not work with the current version.
-                We will address this issue in the future.
+                that youtube marked as category &quot;ravel & Events&quot;,
+                hence some videos with food content may not work with the
+                current version. We will address this issue in the future.
               </p>
               <p>
                 Some of{" "}
