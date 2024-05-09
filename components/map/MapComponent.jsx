@@ -129,9 +129,10 @@ const MapComponent = () => {
     return null;
   };
 
-  const FlyToHandler = ({ restaurant }) => {
+  const FlyToHandler = ({ key, restaurant }) => {
     return (
       <Marker
+        key={key}
         position={restaurant.rest_coor}
         icon={customIcon}
         eventHandlers={{
@@ -145,9 +146,10 @@ const MapComponent = () => {
     );
   };
 
-  const RestaurantCard = ({ restaurant }) => {
+  const RestaurantCard = ({ key, restaurant }) => {
     return (
       <div
+        key={i}
         className={`flex flex-col gap-1 p-3 shadow-md transition ease-in-out duration-300 ${
           curRest === restaurant
             ? "bg-slate-300"
@@ -201,7 +203,9 @@ const MapComponent = () => {
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               {markerList &&
                 markerList.length !== 0 &&
-                markerList.map((rest) => <FlyToHandler restaurant={rest} />)}
+                markerList.map((rest, i) => (
+                  <FlyToHandler key={i} restaurant={rest} />
+                ))}
               <ZoomHandler setZoomLevel={setZoomLevel} />
             </MapContainer>
           </div>
@@ -247,7 +251,9 @@ const MapComponent = () => {
 
           <div className="flex flex-col gap-5 overflow-y-scroll overflow-x-hidden w-full">
             {markerList && markerList.length != 0 ? (
-              markerList.map((rest) => <RestaurantCard restaurant={rest} />)
+              markerList.map((rest, i) => (
+                <RestaurantCard key={i} restaurant={rest} />
+              ))
             ) : (
               <div className="p-2 flex justify-center items-center">
                 <p className="italic text-sm">No Restaurants yet!</p>
