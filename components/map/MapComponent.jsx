@@ -149,7 +149,7 @@ const MapComponent = () => {
   const RestaurantCard = ({ key, restaurant }) => {
     return (
       <div
-        key={i}
+        key={key}
         className={`flex flex-col gap-1 p-3 shadow-md transition ease-in-out duration-300 ${
           curRest === restaurant
             ? "bg-slate-300"
