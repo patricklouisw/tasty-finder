@@ -88,7 +88,7 @@ const MapComponent = () => {
       const video_id = inputValue.split("?v=")[1].substring(0, 11);
 
       const backend_url =
-        process.env.BACKEND_URL || "http://127.0.0.1:8000/video_id/";
+        "https://travel-fastapi-4drm57t3ta-uc.a.run.app/video_id/";
 
       const url = backend_url + video_id;
 
