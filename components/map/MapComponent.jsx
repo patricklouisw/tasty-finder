@@ -192,7 +192,7 @@ const MapComponent = () => {
       <div className="flex flex-col gap-5 items-center justify-center lg:flex-row w-full">
         {/* Map Container */}
         <div className=" basis-2/3 w-full">
-          <div className="flex flex-col grow relative w-full  h-[600px]">
+          <div className="flex flex-col grow relative w-full h-[500px] lg:h-[600px]">
             {loading && <Loader />}
 
             <MapContainer
