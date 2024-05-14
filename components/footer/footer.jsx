@@ -12,6 +12,7 @@ const Footer = () => {
           <Link
             className="underline text-blue-400 hover:text-blue-200"
             href={"https://www.linkedin.com/in/patricklouisw/"}
+            target="_blank"
           >
             Patrick Louis
           </Link>{" "}

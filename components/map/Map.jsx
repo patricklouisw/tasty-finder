@@ -72,6 +72,7 @@ const Map = () => {
               <div className="flex gap-2 my-2">
                 <Link
                   href={"https://www.youtube.com/@MarkWiens"}
+                  target="_blank"
                   className="flex justify-center items-center gap-2 rounded-full bg-red-600 w-fit py-2 px-4 text-white font-bold"
                 >
                   <FaYoutube className="text-lg" />
