@@ -189,15 +189,16 @@ const MapComponent = () => {
 
   return (
     <>
-      <div className="flex gap-5">
-        <div className="relative">
-          <div className="relative">
+      <div className="flex flex-col gap-5 items-center justify-center lg:flex-row w-full">
+        {/* Map Container */}
+        <div className=" basis-2/3 w-full">
+          <div className="flex flex-col grow relative w-full  h-[600px]">
             {loading && <Loader />}
 
             <MapContainer
               center={[43.6426, -79.3871]}
               zoom={zoomLevel}
-              style={{ flex: 1, width: "800px", height: "600px" }}
+              style={{ width: "100%", height: "100%" }}
               ref={mapRef}
             >
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -240,10 +241,8 @@ const MapComponent = () => {
           </div>
         </div>
 
-        <div
-          id="restaurant-list"
-          className="border border-slate-300 w-96 rounded-lg shadow-lg flex flex-col items-center gap-4 p-3 h-[650px]"
-        >
+        {/* Restaurant to Visit */}
+        <div className="basis-1/3 border border-slate-300 rounded-lg shadow-lg flex flex-col items-center gap-4 p-3 h-[650px] w-full">
           <h1 className="font-bold text-slate-800 text-lg pt-3">
             Restaurants to Visit
           </h1>

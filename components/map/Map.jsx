@@ -21,7 +21,7 @@ const Map = () => {
       </h1>
       <DynamicMapComponent />
 
-      <div className="w-5/6">
+      <div className="w-full md:w-5/6">
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger className="p-5 bg-slate-100 rounded font-bold text-slate-800">
@@ -71,6 +71,7 @@ const Map = () => {
                 </Link>
                 <Link
                   href={"https://www.youtube.com/@strictlydumpling"}
+                  target="_blank"
                   className="flex justify-center items-center gap-2 rounded-full bg-red-600 w-fit py-2 px-4 text-white font-bold"
                 >
                   <FaYoutube className="text-lg" />
@@ -78,6 +79,7 @@ const Map = () => {
                 </Link>
                 <Link
                   href={"https://www.youtube.com/@MikeyChenX"}
+                  target="_blank"
                   className="flex justify-center items-center gap-2 rounded-full bg-red-600 w-fit py-2 px-4 text-white font-bold"
                 >
                   <FaYoutube className="text-lg" />
@@ -88,6 +90,7 @@ const Map = () => {
                 Developed by{" "}
                 <Link
                   className="underline text-blue-600 hover:text-blue-400"
+                  target="_blank"
                   href={"https://www.linkedin.com/in/patricklouisw/"}
                 >
                   Patrick Louis
